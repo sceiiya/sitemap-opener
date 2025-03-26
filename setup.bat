@@ -17,7 +17,7 @@ pip install -r requirements.txt
 
 REM Package the app with PyInstaller
 echo Packaging the app...
-pyinstaller --name "Sitemap Opener" --icon "app_icon.ico" --onefile main.py
+pyinstaller --name "Sitemap Opener" --icon "app_icon.ico" --onefile --noconsole main.py
 
 REM Compile the installer with Inno Setup
 echo Compiling the installer...
