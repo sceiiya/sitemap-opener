@@ -12,7 +12,7 @@ class LinkOpenerApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Sitemap Opener by Sceiiya")
-        self.root.geometry("375x450")
+        self.root.geometry("375x500")
 
         # Sitemap URL Entry
         self.sitemap_label = tk.Label(root, text="Enter Sitemap URL:")
@@ -61,7 +61,7 @@ class LinkOpenerApp:
         self.status.pack(pady=10)
         
         self.developer_label = ttk.Label(root, text="2025 © Sceiiya", foreground="purple", cursor="hand2")
-        self.developer_label.pack(pady=10)
+        self.developer_label.pack(pady=5)
 
         self.developer_label.bind("<Button-1>", self.open_github)
 

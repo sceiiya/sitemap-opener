@@ -19,6 +19,10 @@ REM Package the app with PyInstaller
 echo Packaging the app...
 pyinstaller --name "Sitemap Opener" --icon "app_icon.ico" --onefile main.py
 
+REM Compile the installer with Inno Setup
+echo Compiling the installer...
+"C:\Program Files (x86)\Inno Setup 6\ISCC.exe" setup.iss
+
 REM Run the program
 echo Starting the application...
 "dist\Sitemap Opener.exe"
