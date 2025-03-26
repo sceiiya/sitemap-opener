@@ -73,7 +73,7 @@ class LinkOpenerApp:
         self.thread = None
 
 
-    def open_github(event):
+    def open_github(self, event):
       webbrowser.open('https://github.com/sceiiya')
     
     def get_sitemap_links(self, sitemap_url):
