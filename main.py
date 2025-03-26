@@ -11,8 +11,8 @@ import threading
 class LinkOpenerApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("Sitemap Opener")
-        self.root.geometry("375x500")
+        self.root.title("Sitemap Opener by Sceiiya")
+        self.root.geometry("375x450")
 
         # Sitemap URL Entry
         self.sitemap_label = tk.Label(root, text="Enter Sitemap URL:")
@@ -36,7 +36,7 @@ class LinkOpenerApp:
         self.delay_label.pack(pady=5)
         
         self.delay_entry = tk.Entry(root, width=10)
-        self.delay_entry.insert(0, "3")  # Default 3 seconds
+        self.delay_entry.insert(0, "3")
         self.delay_entry.pack(pady=5)
 
         # Control Buttons
@@ -59,6 +59,11 @@ class LinkOpenerApp:
         # Status Label
         self.status = tk.Label(root, text="")
         self.status.pack(pady=10)
+        
+        self.developer_label = ttk.Label(root, text="2025 © Sceiiya", foreground="purple", cursor="hand2")
+        self.developer_label.pack(pady=10)
+
+        self.developer_label.bind("<Button-1>", self.open_github)
 
         # State variables
         self.paused = False
@@ -67,6 +72,10 @@ class LinkOpenerApp:
         self.links = []
         self.thread = None
 
+
+    def open_github(event):
+      webbrowser.open('https://github.com/sceiiya')
+    
     def get_sitemap_links(self, sitemap_url):
         try:
             response = requests.get(sitemap_url, timeout=10)

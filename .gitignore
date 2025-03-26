@@ -1,6 +1,6 @@
-build
-dist
-venv
+dist/
+installer/
+build/
+*.spec
 .env
-.exe
-.spec
+venv/
